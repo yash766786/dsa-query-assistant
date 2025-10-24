@@ -1,40 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🤖 DSA Query Assistant (Next.js + Gemini + Pinecone)
 
-## Getting Started
+## 📘 Overview
+DSA Query Assistant is an intelligent web app that helps users get instant answers to Data Structure and Algorithm-related questions.  
+It uses **Gemini AI** for query rewriting and answering, and **Pinecone** for context-based retrieval to ensure accuracy.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🧠 Features
+- Rewrites user follow-up questions into standalone, complete queries.  
+- Searches relevant context from embedded documents in Pinecone.  
+- Generates precise DSA-based answers using Gemini.  
+- Maintains minimal chat history for contextual understanding.  
+- Built with clean modular architecture and error handling.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🧰 Tech Stack
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+**Frontend:** Next.js (App Router) + TypeScript + Tailwind CSS  
+**Backend:** Next.js API Routes  
+**AI/ML:** Google Gemini (via `ai.models.generateContent`)  
+**Vector Database:** Pinecone  
+**Embeddings:** Google Generative AI Embeddings  
+**Utils:** Custom asyncHandler, ApiResponse, ApiError  
+**Hosting:** (You can add Vercel if you’re hosting there)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Project Structure
+app/
+└── api/
+└── query/
+└── route.ts # Handles AI + Pinecone logic
+lib/
+├── utils/
+│ ├── asyncHandler.ts
+│ ├── ApiResponse.ts
+│ └── ApiError.ts
+├── ai/
+│ └── index.ts
+└── pinecone/
+└── client.ts
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## 🧑‍💻 About Me
+Hey there! I’m **Yash**, a passionate developer focused on  
+**MERN Stack**, **Data Structures & Algorithms**, and **AI integrations**.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 💼 Building full-stack apps with clean architecture  
+- 🧩 Exploring AI, system design, and performance optimization  
+- 🚀 Always learning and sharing knowledge
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📬 Contact Me
+- **GitHub:** [github.com/yash766786](https://github.com/yash766786)  
+- **LinkedIn:** (you can add your link)  
+- **Email:** (optional)  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---
+
+## 📄 License
+This project is open-source under the [MIT License](LICENSE).
+
+---
+
+## 💡 Future Enhancements
+- Add UI for uploading custom notes for personalized Q&A.  
+- Integrate chat history persistence in DB.  
+- Add user authentication for saved sessions.
