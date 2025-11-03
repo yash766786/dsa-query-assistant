@@ -1,4 +1,5 @@
 // this code is only for how indexing done in RAG
+/*
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -40,3 +41,4 @@ async function indexDocument() {
 }
 
 indexDocument();
+*/
